@@ -25,52 +25,28 @@ resource "aws_lambda_permission" "allow_bucket_change" {
   #qualifier     = aws_lambda_alias.test_alias.name
 }
 
+Question 5 : la fonction python fait la copie d'un fichier dans un autre 
+
+def lambda_handler(event, context):
+    
+    s3 = boto3.resource('s3')
+    
+    key = event['Records'][0]['s3']['object']['key']
+    bucketname = event['Records'][0]['s3']['bucket']['name']
+    
+    copy_source = {
+        'Bucket': bucketname ,
+        'Key': key
+    }
+    
+    bucket = s3.Bucket('otherbucket')
+    bucket.copy(copy_source, 'otherkey')
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Question 7 : 
 
 ######################### trucs apportés pour autoriser l'envoit de la fin de la copie du fichier ans le deuxième bucket
 
