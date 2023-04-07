@@ -30,6 +30,7 @@ Dans le fichier random.tf on écrit :
 
 
 On sauvegarde le fichier puis on l'éxécute :
+
     terraform init 
     terraform plan 
     terrafomr apply 
