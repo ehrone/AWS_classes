@@ -43,6 +43,11 @@ def lambda_handler(event, context):
     bucket.copy(copy_source, 'otherkey')
 
 
+Question 6 : 
+
+  
+
+
 
 
 
